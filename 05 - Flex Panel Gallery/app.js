@@ -1,8 +1,12 @@
 const panels = document.querySelectorAll('.panel')
 
 function toggleOpen() {
-  removeOpen()
-  this.classList.toggle('open')
+  if (this.classList.value.includes('open')) {
+    this.classList.toggle('open')
+  } else {
+    removeOpen()
+    this.classList.toggle('open')
+  }
 }
 
 function toggleActive(e) {
